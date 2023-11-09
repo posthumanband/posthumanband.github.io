@@ -14,6 +14,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
     <style>
       body::before {
         content: "";
@@ -35,7 +53,7 @@
         background-size: cover;
       }
       h1 {
-        font-size: 36px;
+        font-size: 2em;
         color: #fff;
       }
       p {
@@ -49,7 +67,8 @@
         justify-content: center;
       }
       .logo {
-        max-width: 100%;
+        max-width: 400px;
+        width: 100%;
       }
       .container {
         display: flex;
@@ -57,7 +76,9 @@
         align-items: center;
       }
       .bio {
-        max-width: 608px;
+        max-width: 400px;
+        font-size: 1.2em;
+        /* justify-content: baseline; */
       }
       .latest-release {
         display: flex;
@@ -68,6 +89,7 @@
       .latest-release img {
         max-width: 400px;
         max-height: 600px;
+        border: 1px solid #121212;
       }
       .latest-release img:hover {
         filter: brightness(1.5);
@@ -77,33 +99,55 @@
         margin-bottom: 2.5rem;
       }
       .button {
-        background-color: #64706a;
         width: 100%;
         color: #fff;
         font-size: smaller;
+        border: 1px solid #64706a;
       }
       .button:hover {
-        background-color: #a9b1ab;
-        color: #64706a;
+        background-color: #64706a;
+        color: #fff;
         transition: background-color 0.5s, color 0.5s;
       }
-      footer {
-        display: flex;
-        justify-content: center;
-      }
-      @media screen and (max-width: 1024px) {
+
+      @media only screen and (max-device-width: 480px) {
+        h1 {
+          font-size: 2em;
+          margin-bottom: 60px;
+        }
+        .container {
+          width: 100%;
+        }
         .logo {
-          max-width: 86%;
+          width: 400%;
+          margin-bottom: 60px;
+        }
+        .bio {
+          font-size: 2.2em;
+          max-width: 80%;
+          margin-bottom: 60px;
+        }
+        .latest-release {
+          width: 100%;
+          font-size: x-large;
+          margin-bottom: 60px;
         }
         .links {
-          max-width: 100%;
+          max-width: 600px;
         }
         .latest-release img {
-          max-width: 100%;
-          max-height: 600px;
+          max-width: 100% !important;
         }
         .button {
-          font-size: medium;
+          font-size: 40px;
+          max-width: 600px;
+          height: 140px !important;
+          line-height: 140px !important;
+          margin-bottom: 40px;
+          border-radius: 30px;
+        }
+        footer {
+          font-size: 2em;
         }
       }
     </style>
